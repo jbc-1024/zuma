@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Zuma </title>
+        <style media="screen">
+            @font-face {
+                font-family: cancun;
+                src: url("./font/cancun.ttf");
+            }
+            .container {
+                text-align: center;
+                background-color: lavender;
+            }
+            .message {
+                font-size: 25px;
+            }
+            canvas {
+                border: 1px black solid;
+                border-radius: 5%;
+                background-color: lightcyan;
+            }
+            textarea {
+                border: 1px red solid;
+                border-radius: 5%;
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <span class="message left">
+                左键发射 __|__
+            </span>
+            <span class="message right">
+                右键换球 __|__
+            </span>
+            <span class="message pause">
+                空格暂停  __|__
+            </span>
+            <span class="message rerun">
+                按R重开  __|__
+            </span>
+            <span class="message hint">
+                左下角导出数据
+            </span>
+            <canvas id="id-canvas" width="1200" height="800"></canvas>
+        </div>
+        <hr>
+        <textarea id="id-textarea">
+        </textarea>
+        <button id="id-button-export">
+            导出数据
+        </button>
+        <button id="id-button-copy">
+            复制内容
+        </button>
+    </body>
+    <!-- game 相关文件 -->
+    <script src='game/utilis.js'></script>
+    <script src='game/jbc_game.js'></script>
+    <script src='game/jbc_label.js'></script>
+    <script src='game/jbc_scene.js'></script>
+    <script src='game/jbc_image.js'></script>
+    <script src='game/jbc_sound.js'></script>
+    <script src='game/jbc_text.js'></script>
+    <script src='game/jbc_layer.js'></script>
+    <script src='game/jbc_animation.js'></script>
+    <!-- 场景相关文件 -->
+    <script src='scene/main/scene_main.js'></script>
+    <script src='scene/main/layer_closing.js'></script>
+    <script src='scene/main/layer_opening.js'></script>
+    <script src='scene/main/layer_fail.js'></script>
+    <!-- 关卡数据 -->
+    <script src='levels/1/data.js'></script>
+    <script src='levels/2/data.js'></script>
+    <script src='levels/3/data.js'></script>
+    <script src='levels/4/data.js'></script>
+    <script src='levels/5/data.js'></script>
+    <script src='levels/6/data.js'></script>
+    <script src='levels/utils.js'></script>
+    <!-- 场景元素文件 -->
+    <script src='element/score/menubar.js'></script>
+    <script src='element/score/score.js'></script>
+    <!--  ball  -->
+    <script src='element/ball/ball.js'></script>
+    <script src='element/ball/air_ball.js'></script>
+    <script src='element/ball/road_ball.js'></script>
+    <script src='element/ball_list.js'></script>
+    <!--  god  -->
+    <script src='element/god/slow_god.js'></script>
+    <script src='element/god/back_god.js'></script>
+    <script src='element/god/bomb_god.js'></script>
+    <script src='element/god/exact_god.js'></script>
+    <!--  ui  -->
+    <script src='element/ui_closing.js'></script>
+    <!--  road  -->
+    <script src='element/road.js'></script>
+    <!--  frog  -->
+    <script src='element/frog.js'></script>
+    <!--  skull  -->
+    <script src='element/skull.js'></script>
+    <!--  explosion  -->
+    <script src='element/explosion.js'></script>
+    <!--  gas burner  -->
+    <script src='element/gas_burner.js'></script>
+    <!--  dialog box  -->
+    <script src='element/dialog_box.js'></script>
+    <!--  machine  -->
+    <script src='element/machine/match_machine.js'></script>
+    <script src='element/machine/combo_machine.js'></script>
+    <script src='element/machine/score_machine.js'></script>
+    <script src='element/machine/merge_machine.js'></script>
+    <script src='element/machine/ball_generator.js'></script>
+    <!-- 主程序入口 -->
+    <script src='main.js'></script>
+</html>
